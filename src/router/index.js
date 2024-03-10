@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import Blog from "@/views/Blog.vue";
 import Rooms from "@/views/Rooms.vue";
 import RoomDetail from "@/views/RoomDetail.vue";
+import Contact from "@/views/Contact.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/room-detail",
     name: "RoomDetail",
     component: RoomDetail,
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: Contact,
   },
 ];
 
