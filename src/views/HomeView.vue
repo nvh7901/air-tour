@@ -11,21 +11,26 @@
     <ThePlan />
 
     <TheBlog />
-
-
   </div>
 </template>
 
 <script>
-import TheBanner from "@/components/TheBanner.vue";
-import TheCategories from "@/components/TheCategories.vue";
-import ThePlaces from "@/components/ThePlaces.vue";
-import TheReviews from "@/components/TheReviews.vue";
-import ThePlan from "@/components/ThePlan.vue";
-import TheBlog from "@/components/TheBlog.vue";
+import TheBanner from "@/components/Home/TheBanner.vue";
+import TheCategories from "@/components/Home/TheCategories.vue";
+import ThePlaces from "@/components/Home/ThePlaces.vue";
+import TheReviews from "@/components/Home/TheReviews.vue";
+import ThePlan from "@/components/Home/ThePlan.vue";
+import TheBlog from "@/components/Home/TheBlog.vue";
 
 export default {
   name: "HomeView",
-  components: { TheBlog, ThePlan, TheReviews, ThePlaces, TheCategories, TheBanner },
+  components: {
+    TheBlog,
+    ThePlan,
+    TheReviews,
+    ThePlaces,
+    TheCategories,
+    TheBanner,
+  },
 };
 </script>

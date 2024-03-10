@@ -9,12 +9,12 @@
         <div class="col-md-8 col-md-offset-2">
           <h3 class="headline centered headline-extra-spacing">
             <strong class="headline-with-separator"
-            >Plan The Vacation of Your Dreams</strong
+              >Plan The Vacation of Your Dreams</strong
             >
             <span class="margin-top-25"
-            >Explore some of the best tips from around the world from our
-                partners and friends. Discover some of the most popular
-                listings!</span
+              >Explore some of the best tips from around the world from our
+              partners and friends. Discover some of the most popular
+              listings!</span
             >
           </h3>
         </div>
@@ -51,8 +51,8 @@
             <i class="im im-icon-Checked-User"></i>
             <h3>Make a Reservation</h3>
             <p>
-              Faucibus ante, in porttitor tellus blandit et. Phasellus
-              tincidunt metus lectus sollicitudin feugiat consectetur.
+              Faucibus ante, in porttitor tellus blandit et. Phasellus tincidunt
+              metus lectus sollicitudin feugiat consectetur.
             </p>
           </div>
         </div>
@@ -64,10 +64,8 @@
 
 <script>
 export default {
-  name: "ThePlan"
+  name: "ThePlan",
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

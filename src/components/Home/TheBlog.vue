@@ -79,7 +79,7 @@
 
         <div class="col-md-12 centered-content">
           <a href="pages-blog.html" class="button border margin-top-10"
-          >View Blog</a
+            >View Blog</a
           >
         </div>
       </div>
@@ -90,10 +90,8 @@
 
 <script>
 export default {
-  name: "TheBlog"
+  name: "TheBlog",
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
