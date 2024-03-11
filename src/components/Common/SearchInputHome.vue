@@ -2,22 +2,21 @@
   <div class="main-search-input">
     <div class="main-search-input-item location">
       <div id="autocomplete-container">
-        <input id="autocomplete-input" type="text" placeholder="Location" />
+        <input
+          id="autocomplete-input"
+          type="text"
+          placeholder="Location"
+          v-model="keyword"
+        />
       </div>
       <a href="#"><i class="fa fa-map-marker"></i></a>
 
-      <ul class="list-location">
-        <li>
+      <ul class="list-location" v-if="locationList.length > 0 && keyword">
+        <li v-for="location in locationList" :key="location.id">
           <span class="im im-icon-Location-2"></span>
-          <span class="location-item-title" style="padding-left: 15px"
-            >Hà Nội</span
-          >
-        </li>
-        <li>
-          <span class="im im-icon-Location-2"></span>
-          <span class="location-item-title" style="padding-left: 15px"
-            >Hồ Chí Minh</span
-          >
+          <span class="location-item-title" style="padding-left: 15px">{{
+            location.name
+          }}</span>
         </li>
       </ul>
     </div>
@@ -32,8 +31,32 @@
 </template>
 
 <script>
+import { useStore } from "vuex";
+import { computed, ref, watch } from "vue";
+
 export default {
   name: "SearchInputHome",
+  setup() {
+    const keyword = ref("");
+    const store = useStore();
+
+    let searchTimeout = null;
+
+    watch(keyword, (newKeyword) => {
+      if (searchTimeout !== null) {
+        clearTimeout(searchTimeout);
+      }
+      searchTimeout = setTimeout(() => {
+        store.dispatch("location/getLocationListAction", newKeyword);
+      }, 2000);
+    });
+    const locationList = computed(() => store.state.location.locationList);
+
+    return {
+      locationList,
+      keyword,
+    };
+  },
 };
 </script>
 
