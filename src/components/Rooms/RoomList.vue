@@ -9,8 +9,8 @@
     </div>
 
     <!-- Listings -->
-    <div class="row fs-listings">
-      <RoomListItem />
+    <div class="row fs-listings" v-if="roomList.length > 0">
+      <RoomListItem v-for="room in roomList" :key="room.id" :room="room" />
     </div>
     <!-- Listings Container / End -->
 
@@ -51,11 +51,21 @@
 
 <script>
 import RoomListItem from "@/components/Rooms/RoomListItem.vue";
+import { useStore } from "vuex";
+import { computed } from "vue";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "RoomList",
   components: { RoomListItem },
+  setup() {
+    const store = useStore();
+    const roomList = computed(() => store.state.rooms.roomList);
+
+    return {
+      roomList,
+    };
+  },
 };
 </script>
 

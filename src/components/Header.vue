@@ -80,8 +80,36 @@
               </div>
               <router-link to="/auth" class="sign-in popup-with-zoom-anim"
                 ><i class="sl sl-icon-login"></i>
-                Sign In</router-link
+                Sign In
+              </router-link>
+
+              <div
+                id="menu-item-839-en"
+                class="sign-in popup-with-zoom-anim lang-item lang-item-7 lang-item-en current-lang lang-item-first menu-item menu-item-type-custom menu-item-object-custom current_page_item menu-item-home menu-item-839-en"
               >
+                <a href="https://toprate.io/" hreflang="en-GB" lang="en-GB"
+                  ><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAt1BMVEWSmb66z+18msdig8La3u+tYX9IaLc7W7BagbmcUW+kqMr/q6n+//+hsNv/lIr/jIGMnNLJyOP9/fyQttT/wb3/////aWn+YWF5kNT0oqz0i4ueqtIZNJjhvt/8gn//WVr/6+rN1+o9RKZwgcMPJpX/VFT9UEn+RUX8Ozv2Ly+FGzdYZrfU1e/8LS/lQkG/mbVUX60AE231hHtcdMb0mp3qYFTFwNu3w9prcqSURGNDaaIUMX5FNW5wYt7AAAAAjklEQVR4AR3HNUJEMQCGwf+L8RR36ajR+1+CEuvRdd8kK9MNAiRQNgJmVDAt1yM6kSzYVJUsPNssAk5N7ZFKjVNFAY4co6TAOI+kyQm+LFUEBEKKzuWUNB7rSH/rSnvOulOGk+QlXTBqMIrfYX4tSe2nP3iRa/KNK7uTmWJ5a9+erZ3d+18od4ytiZdvZyuKWy8o3UpTVAAAAABJRU5ErkJggg=="
+                    alt="English"
+                    width="16"
+                    height="11"
+                    style="width: 16px; height: 11px"
+                /></a>
+              </div>
+
+              <div
+                id="menu-item-839-vi"
+                class="sign-in popup-with-zoom-anim lang-item lang-item-16 lang-item-vi menu-item menu-item-type-custom menu-item-object-custom menu-item-839-vi"
+              >
+                <a href="https://toprate.io/vi/" hreflang="vi" lang="vi"
+                  ><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAATlBMVEX+AAD2AADvAQH/eXn+cXL9amr8YmL9Wlr8UlL7TkvoAAD8d0f6Pz/3ODf2Ly/0KSf6R0f6wTv60T31IBz6+jr4+Cv3QybzEhL4bizhAADgATv8AAAAW0lEQVR4AQXBgU3DQBRAMb+7jwKVUPefkQEQTYJqByBENpKUGoZslXoN5LPONH8G9WWZ7pGlOn6XZmaGRce1J/seei4dl+7dPWDqkk7+58e3+igdlySPcYbwBG+lPhCjrtt9EgAAAABJRU5ErkJggg=="
+                    alt="Tiếng Việt"
+                    width="16"
+                    height="11"
+                    style="width: 16px; height: 11px"
+                /></a>
+              </div>
             </div>
           </div>
           <!-- Right Side Content / End -->

@@ -12,7 +12,11 @@
       <a href="#"><i class="fa fa-map-marker"></i></a>
 
       <ul class="list-location" v-if="locationList.length > 0 && keyword">
-        <li v-for="location in locationList" :key="location.id">
+        <li
+          v-for="location in locationList"
+          :key="location.id"
+          @click="handleClickLocation(location)"
+        >
           <span class="im im-icon-Location-2"></span>
           <span class="location-item-title" style="padding-left: 15px">{{
             location.name
@@ -33,13 +37,14 @@
 <script>
 import { useStore } from "vuex";
 import { computed, ref, watch } from "vue";
+import { useRouter } from "vue-router";
 
 export default {
   name: "SearchInputHome",
   setup() {
     const keyword = ref("");
     const store = useStore();
-
+    const router = useRouter();
     let searchTimeout = null;
 
     watch(keyword, (newKeyword) => {
@@ -52,9 +57,13 @@ export default {
     });
     const locationList = computed(() => store.state.location.locationList);
 
+    const handleClickLocation = (location) => {
+      router.push(`/rooms/${location._id}`);
+    };
     return {
       locationList,
       keyword,
+      handleClickLocation,
     };
   },
 };

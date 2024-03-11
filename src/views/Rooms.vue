@@ -2040,11 +2040,19 @@
 
 <script>
 import RoomList from "@/components/Rooms/RoomList.vue";
+import { useStore } from "vuex";
+import { useRoute } from "vue-router";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Rooms",
   components: { RoomList },
+  setup() {
+    const route = useRoute();
+    const store = useStore();
+
+    store.dispatch("rooms/getRoomListByLocation", route.params.locationId);
+  },
 };
 </script>
 
