@@ -4,6 +4,7 @@ import Blog from "@/views/Blog.vue";
 import Rooms from "@/views/Rooms.vue";
 import RoomDetail from "@/views/RoomDetail.vue";
 import Contact from "@/views/Contact.vue";
+import Auth from "@/views/Auth.vue";
 
 const routes = [
   {
@@ -31,11 +32,17 @@ const routes = [
     name: "Contact",
     component: Contact,
   },
+  {
+    path: "/auth",
+    name: "Auth",
+    component: Auth,
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  linkActiveClass: "current",
 });
 
 export default router;
