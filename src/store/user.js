@@ -1,14 +1,18 @@
-import { registerAPI } from "@/api/auth";
+import { loginAPI, registerAPI } from "@/api/auth";
 
 const state = () => {
   return {
     register: {},
+    login: {},
   };
 };
 
 const mutations = {
   setRegisterMutation(state, payload) {
     state.register = payload;
+  },
+  setLoginMutation(state, payload) {
+    state.login = payload;
   },
 };
 
@@ -19,7 +23,13 @@ const actions = {
   async registerAction({ commit }, { data, router }) {
     const userRegister = await registerAPI(data);
     router.push("/login");
-    commit("setUserRegisterMutation", userRegister);
+    commit("setRegisterMutation", userRegister);
+  },
+
+  async loginAction({ commit }, { data, router }) {
+    const userLogin = await loginAPI(data);
+    router.push("/");
+    commit("setLoginMutation", userLogin);
   },
 };
 

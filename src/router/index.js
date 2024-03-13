@@ -12,6 +12,9 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
+    meta: {
+      title: "Trang Chủ",
+    },
   },
   {
     path: "/blog",
@@ -22,26 +25,41 @@ const routes = [
     path: "/rooms/:locationId",
     name: "Rooms",
     component: Rooms,
+    meta: {
+      title: "Danh Sách Phòng",
+    },
   },
   {
     path: "/room-detail/:roomId",
     name: "RoomDetail",
     component: RoomDetail,
+    meta: {
+      title: "Chi Tiết Phòng",
+    },
   },
   {
     path: "/contact",
     name: "Contact",
     component: Contact,
+    meta: {
+      title: "Liên Hệ",
+    },
   },
   {
     path: "/login",
     name: "Login",
     component: Login,
+    meta: {
+      title: "Đăng Nhập",
+    },
   },
   {
     path: "/register",
     name: "Register",
     component: Register,
+    meta: {
+      title: "Đăng Ký",
+    },
   },
 ];
 
@@ -51,4 +69,8 @@ const router = createRouter({
   linkActiveClass: "current",
 });
 
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || "Trang không tồn tại";
+  next();
+});
 export default router;
