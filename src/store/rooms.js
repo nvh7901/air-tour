@@ -1,10 +1,14 @@
-import { getReviewRoomDetailAPI, getRoomDetailAPI, getRoomListByLocationAPI } from "@/api/rooms";
+import {
+  getReviewRoomDetailAPI,
+  getRoomDetailAPI,
+  getRoomListByLocationAPI,
+} from "@/api/rooms";
 
 const state = () => {
   return {
     roomList: [],
     roomDetail: {},
-    reviewRoomDetail: {}
+    reviewRoomDetail: {},
   };
 };
 
@@ -17,7 +21,7 @@ const mutations = {
   },
   setReviewRoomDetailMutation(state, payload) {
     state.reviewRoomDetail = payload;
-  }
+  },
 };
 
 const actions = {
@@ -42,5 +46,5 @@ export default {
   namespaced: true,
   state,
   mutations,
-  actions
+  actions,
 };

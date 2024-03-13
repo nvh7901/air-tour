@@ -78,9 +78,9 @@
                   </li>
                 </ul>
               </div>
-              <router-link to="/auth" class="sign-in popup-with-zoom-anim"
+              <router-link to="/login" class="sign-in popup-with-zoom-anim"
                 ><i class="sl sl-icon-login"></i>
-                Sign In
+                Login
               </router-link>
 
               <div

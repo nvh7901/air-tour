@@ -1,6 +1,4 @@
 <template>
-
-
   <div class="clearfix"></div>
   <section class="comments listing-reviews">
     <ul>
