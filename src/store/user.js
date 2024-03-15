@@ -13,6 +13,10 @@ const mutations = {
   },
   setLoginMutation(state, payload) {
     state.login = payload;
+    localStorage.setItem("login", JSON.stringify(payload));
+  },
+  setUserLoginFromLocalStorageMutation(state, payload) {
+    state.login = payload;
   },
 };
 
@@ -30,6 +34,14 @@ const actions = {
     const userLogin = await loginAPI(data);
     router.push("/");
     commit("setLoginMutation", userLogin);
+  },
+
+  loadUserLoginFromLocalStorage({ commit }) {
+    let userLogin = null;
+    if (localStorage.getItem("login")) {
+      userLogin = JSON.parse(localStorage.getItem("login"));
+    }
+    commit("setUserLoginFromLocalStorageMutation", userLogin);
   },
 };
 

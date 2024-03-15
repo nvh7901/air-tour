@@ -72,27 +72,6 @@
               :key="reviewRoom.id"
               :reviewRoom="reviewRoom"
             />
-
-            <!-- Pagination -->
-            <div class="clearfix"></div>
-            <div class="row">
-              <div class="col-md-12">
-                <!-- Pagination -->
-                <div class="pagination-container margin-top-30">
-                  <nav class="pagination">
-                    <ul>
-                      <li><a href="#" class="current-page">1</a></li>
-                      <li><a href="#">2</a></li>
-                      <li>
-                        <a href="#"><i class="sl sl-icon-arrow-right"></i></a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-            <div class="clearfix"></div>
-            <!-- Pagination / End -->
           </div>
         </div>
 
@@ -120,49 +99,12 @@
             class="boxed-widget booking-widget margin-top-35"
           >
             <h3><i class="fa fa-calendar-check-o"></i> Booking</h3>
-            <div class="row with-forms margin-top-0">
-              <!-- Date Range Picker - docs: http://www.daterangepicker.com/ -->
-              <div class="col-lg-12">
-                <input
-                  type="text"
-                  id="date-picker"
-                  placeholder="Date"
-                  readonly="readonly"
-                />
-              </div>
-
-              <!-- Panel Dropdown -->
-              <div class="col-lg-12">
-                <div class="panel-dropdown">
-                  <a href="#"
-                    >Guests <span class="qtyTotal" name="qtyTotal">1</span></a
-                  >
-                  <div class="panel-dropdown-content" style="width: 309.328px">
-                    <!-- Quantity Buttons -->
-                    <div class="qtyButtons">
-                      <div class="qtyTitle">Adults</div>
-                      <div class="qtyDec"></div>
-                      <input type="text" name="qtyInput" value="1" />
-                      <div class="qtyInc"></div>
-                    </div>
-
-                    <div class="qtyButtons">
-                      <div class="qtyTitle">Childrens</div>
-                      <div class="qtyDec"></div>
-                      <input type="text" name="qtyInput" value="0" />
-                      <div class="qtyInc"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Panel Dropdown / End -->
-            </div>
 
             <!-- Book Now -->
-            <a
-              href="pages-booking.html"
+            <router-link
+              :to="`/booking/${roomDetail._id}`"
               class="button book-now fullwidth margin-top-5"
-              >Request To Book</a
+              >Request To Book</router-link
             >
 
             <!-- Estimated Cost -->

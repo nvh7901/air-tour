@@ -113,6 +113,15 @@
                     style="width: 16px; height: 11px"
                 /></a>
               </div>
+
+              <a
+                style="cursor: pointer"
+                class="sign-in popup-with-zoom-anim"
+                @click="handleLogout"
+                v-if="userLogin.user"
+                ><i class="sl sl-icon-login"></i>
+                Logout
+              </a>
             </div>
           </div>
           <!-- Right Side Content / End -->
@@ -128,16 +137,23 @@
 <script>
 import { useStore } from "vuex";
 import { computed } from "vue";
+import { useRouter } from "vue-router";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Header",
   setup() {
     const store = useStore();
+    const router = useRouter();
     const userLogin = computed(() => store.state.auth.login);
 
+    const handleLogout = () => {
+      localStorage.clear();
+      router.push("/login");
+    };
     return {
       userLogin,
+      handleLogout,
     };
   },
 };

@@ -6,6 +6,7 @@ import RoomDetail from "@/views/RoomDetail.vue";
 import Contact from "@/views/Contact.vue";
 import Login from "@/views/Login.vue";
 import Register from "@/views/Register.vue";
+import Booking from "@/views/Booking.vue";
 
 const routes = [
   {
@@ -59,6 +60,14 @@ const routes = [
     component: Register,
     meta: {
       title: "Đăng Ký",
+    },
+  },
+  {
+    path: "/booking/:roomId",
+    name: "Booking",
+    component: Booking,
+    meta: {
+      title: "Đặt Phòng",
     },
   },
 ];

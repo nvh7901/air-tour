@@ -21,6 +21,7 @@ import ThePlaces from "@/components/Home/ThePlaces.vue";
 import TheReviews from "@/components/Home/TheReviews.vue";
 import ThePlan from "@/components/Home/ThePlan.vue";
 import TheBlog from "@/components/Home/TheBlog.vue";
+import { useStore } from "vuex";
 
 export default {
   name: "HomeView",
@@ -31,6 +32,10 @@ export default {
     ThePlaces,
     TheCategories,
     TheBanner,
+  },
+  setup() {
+    const store = useStore();
+    store.dispatch("auth/loadUserLoginFromLocalStorage");
   },
 };
 </script>
