@@ -34,7 +34,7 @@
                   <router-link to="/">Home</router-link>
                 </li>
                 <li>
-                  <router-link to="/blog">Blog</router-link>
+                  <router-link to="/rooms">Room</router-link>
                 </li>
                 <li>
                   <router-link to="/contact">Contact</router-link>

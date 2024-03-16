@@ -2045,7 +2045,7 @@ import { useRoute } from "vue-router";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Rooms",
+  name: "RoomsLocation",
   components: { RoomList },
   setup() {
     const route = useRoute();

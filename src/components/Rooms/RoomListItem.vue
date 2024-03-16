@@ -49,7 +49,7 @@ export default {
   setup(props) {
     const router = useRouter();
     const handleClickRoom = () => {
-      router.push(`/room-detail/${props.room._id}`);
+      router.push(`/room-detail-location/${props.room._id}`);
     };
 
     return {

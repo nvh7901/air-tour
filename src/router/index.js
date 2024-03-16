@@ -1,12 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import Blog from "@/views/Blog.vue";
-import Rooms from "@/views/Rooms.vue";
-import RoomDetail from "@/views/RoomDetail.vue";
 import Contact from "@/views/Contact.vue";
 import Login from "@/views/Login.vue";
 import Register from "@/views/Register.vue";
-import Booking from "@/views/Booking.vue";
+import RoomDetailLocation from "@/views/RoomDetailLocation.vue";
+import RoomsLocation from "@/views/RoomsLocation.vue";
 
 const routes = [
   {
@@ -18,24 +16,19 @@ const routes = [
     },
   },
   {
-    path: "/blog",
-    name: "Blog",
-    component: Blog,
-  },
-  {
-    path: "/rooms/:locationId",
-    name: "Rooms",
-    component: Rooms,
+    path: "/rooms-location/:locationId",
+    name: "RoomsLocation",
+    component: RoomsLocation,
     meta: {
-      title: "Danh Sách Phòng",
+      title: "Danh Sách Phòng Theo Vị Trí",
     },
   },
   {
-    path: "/room-detail/:roomId",
-    name: "RoomDetail",
-    component: RoomDetail,
+    path: "/room-detail-location/:roomId",
+    name: "RoomDetailLocation",
+    component: RoomDetailLocation,
     meta: {
-      title: "Chi Tiết Phòng",
+      title: "Chi Tiết Phòng Theo Vị Trí",
     },
   },
   {
@@ -60,14 +53,6 @@ const routes = [
     component: Register,
     meta: {
       title: "Đăng Ký",
-    },
-  },
-  {
-    path: "/booking/:roomId",
-    name: "Booking",
-    component: Booking,
-    meta: {
-      title: "Đặt Phòng",
     },
   },
 ];
