@@ -1,12 +1,7 @@
 <template>
   <section class="listings-container margin-top-30">
     <!-- Sorting / Layout Switcher -->
-    <div class="row fs-switcher">
-      <div class="col-md-6">
-        <!-- Showing Results -->
-        <p class="showing-results">14 Results Found</p>
-      </div>
-    </div>
+    <div class="row fs-switcher"></div>
 
     <!-- Listings -->
     <div class="row fs-listings" v-if="roomList.length > 0">
@@ -38,11 +33,6 @@
         </div>
         <div class="clearfix"></div>
         <!-- Pagination / End -->
-
-        <!-- Copyrights -->
-        <div class="copyrights margin-top-0">
-          © 2021 Listeo. All Rights Reserved.
-        </div>
       </div>
     </div>
     <!-- Pagination Container / End -->

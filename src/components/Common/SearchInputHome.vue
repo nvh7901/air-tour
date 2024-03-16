@@ -5,7 +5,7 @@
         <input
           id="autocomplete-input"
           type="text"
-          placeholder="Location"
+          :placeholder="$t(`bannerSearchInputPlaceholder`)"
           v-model="keyword"
         />
       </div>
@@ -29,7 +29,7 @@
       class="button"
       onclick="window.location.href='listings-half-screen-map-list.html'"
     >
-      Search
+      {{ $t("bannerSearchInputButton") }}
     </button>
   </div>
 </template>

@@ -10,11 +10,11 @@
         <div class="row">
           <div class="col-md-12">
             <h2>
-              Find Nearby
+              {{ $t("bannerFindNearBy") }}
               <!-- Typed words can be configured in script settings at the bottom of this HTML file -->
               <span class="typed-words"></span>
             </h2>
-            <h4>Expolore top-rated attractions, activities and more</h4>
+            <h4>{{ $t("bannerExpolore") }}</h4>
 
             <SearchInputHome />
           </div>

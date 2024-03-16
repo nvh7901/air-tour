@@ -20,9 +20,21 @@
           <!-- Listing Nav -->
           <div id="listing-nav" class="listing-nav-container">
             <ul class="listing-nav">
-              <li><a href="#listing-overview" class="">Overview</a></li>
-              <li><a href="#listing-gallery">Gallery</a></li>
-              <li><a href="#listing-reviews">Reviews</a></li>
+              <li>
+                <a href="#listing-overview" class="">{{
+                  $t("roomDetailListingNavOverview")
+                }}</a>
+              </li>
+              <li>
+                <a href="#listing-gallery">{{
+                  $t("roomDetailListingNavGallery")
+                }}</a>
+              </li>
+              <li>
+                <a href="#listing-reviews">{{
+                  $t("roomDetailListingNavReview")
+                }}</a>
+              </li>
             </ul>
           </div>
 
@@ -30,9 +42,15 @@
           <div id="listing-overview" class="listing-section">
             <!-- Apartment Description -->
             <ul class="apartment-details">
-              <li>{{ roomDetail.guests }} guests</li>
-              <li>{{ roomDetail.bedRoom }} bedroom</li>
-              <li>{{ roomDetail.bath }} bathroom</li>
+              <li>
+                {{ roomDetail.guests }} {{ $t("roomDetailOverviewGuest") }}
+              </li>
+              <li>
+                {{ roomDetail.bedRoom }} {{ $t("roomDetailOverviewBedroom") }}
+              </li>
+              <li>
+                {{ roomDetail.bath }} {{ $t("roomDetailOverviewBathroom") }}
+              </li>
             </ul>
 
             <!-- Description -->
@@ -43,14 +61,16 @@
 
           <!-- Slider -->
           <div id="listing-gallery" class="listing-section">
-            <h3 class="listing-desc-headline margin-top-70">Gallery</h3>
+            <h3 class="listing-desc-headline margin-top-70">
+              {{ $t("roomDetailListingNavGallery") }}
+            </h3>
             <img :src="roomDetail.image" :alt="roomDetail.image" />
           </div>
 
           <!-- Reviews -->
           <div id="listing-reviews" class="listing-section">
             <h3 class="listing-desc-headline margin-top-75 margin-bottom-20">
-              Reviews
+              {{ $t("roomDetailListingNavReview") }}
             </h3>
 
             <!-- Reviews -->
@@ -70,14 +90,7 @@
             class="verified-badge with-tip"
             data-tip-content="Listing has been verified and belongs the business owner or manager."
           >
-            <i class="sl sl-icon-check"></i> Verified Listing
-            <div
-              class="tip-content"
-              style="width: 373.328px; max-width: 373.328px"
-            >
-              Listing has been verified and belongs the business owner or
-              manager.
-            </div>
+            <i class="sl sl-icon-check"></i>{{ $t("roomDetailVerified") }}
           </div>
 
           <!-- Book Now -->
@@ -85,12 +98,15 @@
             id="booking-widget-anchor"
             class="boxed-widget booking-widget margin-top-35"
           >
-            <h3><i class="fa fa-calendar-check-o"></i> Booking</h3>
+            <h3>
+              <i class="fa fa-calendar-check-o"></i
+              >{{ $t("roomDetailBooking") }}
+            </h3>
 
             <!-- Book Now -->
-            <a href="#" class="button book-now fullwidth margin-top-5"
-              >Request To Book</a
-            >
+            <a href="#" class="button book-now fullwidth margin-top-5">{{
+              $t("roomDetailRequestToBook")
+            }}</a>
 
             <!-- Estimated Cost -->
             <!-- 				<div class="booking-estimated-cost">

@@ -9,5 +9,5 @@ export const getRoomDetailAPI = (roomId) => {
 };
 
 export const getReviewRoomDetailAPI = (roomId) => {
-  return axiosAPI.get(`/api/reviews/byRoom?roomId=${roomId}`);
+  return axiosAPI.get(`/api/reviews/byRoom?roomId=${roomId}&limit=7`);
 };
